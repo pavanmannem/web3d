@@ -1,0 +1,70 @@
+
+@font-face {
+    font-family: "otto";
+    src: url(Fonts/OTTOATTACTYPE.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Cigra";
+    src: url(Fonts/Cigra.ttf) format("truetype");
+}
+
+
+
+/* body
+{
+    height: 100vh;
+    font-family: 'Poppins';
+} */
+
+.webgl
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rebeccapurple;
+    outline: none;
+}
+
+.designed
+{
+    color: #F0BB62;
+    top: 60px;
+    left: 200px;
+    padding:1px;
+    position: absolute;
+    white-space: nowrap;
+    display: inline-block;
+    font-size: 100px;
+    font-family: Cigra;
+
+}
+
+.by
+{
+    color: #95D1CC;
+    top: 160px;
+    left: 200px;
+    padding:1px;
+    position: absolute;
+    white-space: nowrap;
+    font-size: 100px;
+    font-family: Cigra;
+
+}
+
+
+#time
+{
+    position: fixed;
+    top: 90%;
+    left: 10%;
+    margin: 0 auto;
+    color: #95D1CC;
+    /* color: #F0BB62; */
+    font-family:Cigra;
+    font-size: 60px;
+
+
+
+}
