@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>pavan.who</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <!-- <link rel="stylesheet" href="style.css" />
+        <script type="module" src="script.js"></script> -->
+        <link rel="shortcut icon" href="#">
+    </head>
+    
+    <body>
+
+        <div class="name">pavan</div> 
+        <div id="date"></div> 
+        <div id="time"></div> 
+        <div id="loc"></div> 
+
+        <div class="cursor"> 
+            <div class="cursor__ball cursor__ball--big">
+                    <svg height="30" width="30">
+                        <circle cx="15" cy="15" r="15" stroke-width="0"></circle>
+                    </svg>
+                </div>
+            
+            <div class="cursor__ball cursor__ball--small">
+                <svg height="10" width="10">
+                    <circle cx="5" cy="5" r="5" stroke-width="0"></circle>
+                </svg>
+            </div>
+        </div>  
+
+
+
+        <script>
+          $.getJSON('https://geolocation-db.com/json/')
+             .done (function(location) {
+                console.log(location)
+                 if (location.city){
+                    str = (location.city + ", " + location.country_code).toLocaleLowerCase();
+                 }
+                 else{
+                     if(location.country_name){
+                        str = (location.country_name);
+                     }
+                 }
+
+                $('#loc').html(str);
+             });
+        </script>
+
+        <div class="hoverlines"> 
+            <div id="h1">
+                <span>+</span> designer
+            </div>
+
+            <div id="h2">
+                <span>+</span> writer
+            </div>
+
+            <div id="h3">
+                <span>+</span> developer
+            </div>
+
+        </div>
+
+        <div class="btn-shine">click to rotate<div>
+
+
+
+
+    </body>
+
+</html>
